@@ -1,0 +1,49 @@
+name: Laporan Bencana
+description: Laporkan lokasi terdampak dan kebutuhan mendesak
+title: "[Laporan] "
+labels: ["belum-diverifikasi"]
+body:
+  - type: input
+    id: lokasi
+    attributes:
+      label: Lokasi
+      description: Alamat atau titik koordinat lokasi terdampak
+      placeholder: "contoh: Jl. Merdeka No. 10, Kelurahan Sukamaju"
+    validations:
+      required: true
+  - type: dropdown
+    id: jenis-kebutuhan
+    attributes:
+      label: Jenis Kebutuhan
+      description: Pilih kebutuhan yang paling mendesak
+      options:
+        - Makanan
+        - Air Bersih
+        - Obat-obatan
+        - Selimut/Pakaian
+        - Evakuasi
+        - Lainnya
+    validations:
+      required: true
+  - type: input
+    id: jumlah-terdampak
+    attributes:
+      label: Jumlah Terdampak
+      description: Perkiraan jumlah orang yang terdampak di lokasi ini
+      placeholder: "contoh: 25 orang"
+    validations:
+      required: true
+  - type: textarea
+    id: keterangan
+    attributes:
+      label: Keterangan Tambahan
+      description: Informasi tambahan yang relevan
+    validations:
+      required: false
+  - type: input
+    id: kontak-pelapor
+    attributes:
+      label: Kontak Pelapor
+      description: Nomor telepon atau kontak yang bisa dihubungi
+    validations:
+      required: true
